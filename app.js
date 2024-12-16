@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDB = require('./util/MongoDBConnect');
-// const userRoutes = require('./routes/userRoutes');
+ const userRoutes = require('./routes/userRoute');
 // const skillRoutes = require('./routes/skillRoutes');
 // const languageRoutes = require('./routes/languageRoutes');
 // const educationRoutes = require('./routes/educationRoutes');
@@ -13,7 +13,7 @@ connectDB();
 app.use(express.json());
  
 // Routes
-// app.use('/api/users', userRoutes);
+app.use('/api/users', userRoutes);
 // app.use('/api/skills', skillRoutes);
 // app.use('/api/languages', languageRoutes);
 // app.use('/api/education', educationRoutes);
